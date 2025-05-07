@@ -1,16 +1,25 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private GameObject worldA;
+    [SerializeField] private GameObject worldB;
+    [SerializeField] private GameObject Camera1;
+    [SerializeField] private GameObject Camera2;
+    private bool isWorldAActive = true;
 
-    // Update is called once per frame
-    void Update()
+    void OnSwitchCharacter(InputValue value)
     {
+        if (!value.isPressed) return;
+
+        isWorldAActive = !isWorldAActive;
+        worldA.SetActive(isWorldAActive);
+        worldB.SetActive(!isWorldAActive);
         
+        Camera1.SetActive(isWorldAActive);
+        Camera2.SetActive(!isWorldAActive);
+
+
     }
 }

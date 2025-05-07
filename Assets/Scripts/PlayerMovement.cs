@@ -58,6 +58,23 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
+    void OnSwitchCharacter(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            // Your character switch logic here
+            Debug.Log("Switch character pressed!");
+
+
+
+
+        }
+    }
+
+
+
+
+
 
 
 
