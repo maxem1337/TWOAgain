@@ -7,7 +7,16 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject worldB;
     [SerializeField] private GameObject Camera1;
     [SerializeField] private GameObject Camera2;
+
     private bool isWorldAActive = true;
+
+
+    private void Start()
+    {
+         worldB.SetActive(false);
+    }
+
+
 
     void OnSwitchCharacter(InputValue value)
     {
