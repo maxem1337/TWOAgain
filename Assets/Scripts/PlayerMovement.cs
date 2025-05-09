@@ -39,9 +39,6 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-
-
-
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
@@ -56,26 +53,5 @@ public class PlayerMovement : MonoBehaviour
             myrb.linearVelocity = new Vector2(myrb.linearVelocity.x, jumpForce);
         }
     }
-
-
-    void OnSwitchCharacter(InputValue value)
-    {
-        if (value.isPressed)
-        {
-            // Your character switch logic here
-            Debug.Log("Switch character pressed!");
-
-
-
-
-        }
-    }
-
-
-
-
-
-
-
 
 }
